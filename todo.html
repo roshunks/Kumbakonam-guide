@@ -1,0 +1,83 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Todo list</title>
+<link rel="stylesheet" href="
+https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet">
+
+</head>
+<body>
+<div id="container" style="max-width: 750px;margin: 5em auto;">
+<div style="border:2px solid black;padding: 2em 4em 2em 2em;background-color: white;">
+<center>
+<h1>TODO<span style="color: darkblue">-REMINDER</span></h1>
+<input type="text" placeholder="&nbsp;&nbsp;&nbsp;Add New" >
+<button name="button" id='button' style="background-color: #efefef; border-radius: 20px; height: 30px; width: 50px;">+Add</button>
+<br><br>
+<ul>
+<li>Visited places<span style="float: right;"><i class="fa fa-trash"></i></span></li><br>
+<li>Groceries<span style="float: right;"><i class="fa fa-trash"></i></span></li><br>
+<li>Homeworks<span style="float: right;"><i class="fa fa-trash"></i></span></li> <br>
+<li>Unseen messages<span style="float: right;"><i class="fa fa-trash"></i></span></li><br>
+</ul>
+</center>
+</div>
+</div>
+<center><span style="float: bottom; height: 80px; background-color: #efefef">Designed by Akhilan & Roshan</span></center>
+</body>
+</html>
+
+<script>
+
+$("button").click(function(){
+var todoText = $('input').val();
+$(this).val("");
+$('ul').append('<li>' + todoText + '<span style="float: right;"><i class="fa fa-trash"></i></span></li><br>');
+});
+
+$('ul').on('click', "span" , function(event){
+$(this).parent().fadeOut(500,function(){
+$(this).remove();
+});
+event.stopPropagation();
+});
+$('ul').on('click', 'li', function(){
+$(this).toggleClass('done');
+});
+
+</script>
+
+<style>
+body{
+background-color: #efefef;
+}
+li{
+background-color: #efefef;
+height: 30px;
+padding: 1em;  
+text-align: left;
+font-size: 20px;
+}
+ul{
+list-style-type: none;
+}
+input{
+width: 300px; height: 30px; border-radius: 20px; border-width: 1px solid black;
+}
+li:nth-child(2n){
+background-color: #efefef;
+height: 30px;
+padding: 2%;
+width: 380px;
+text-align: left;
+font-size: 20px;
+align-content: center;
+}
+</style>

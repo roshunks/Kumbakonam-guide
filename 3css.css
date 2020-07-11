@@ -1,0 +1,152 @@
+body {
+  font-family: "Lato", sans-serif;
+
+  margin: 0px;
+}
+
+.container1 {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.nav-wrapper {
+  display:inline-flex;
+  justify-content:flex-start;
+  padding: 38px;
+}
+
+.left-side {
+  display:flex;
+}
+
+.nav-wrapper > .left-side > div {
+  margin-right: 20px;
+  text-transform: uppercase;
+  font-size:1.2rem;
+}
+
+.nav-link-wrapper {
+  height: 22px;
+  border-bottom: 8px solid transparent;
+  transition: border-bottom 0.5s;
+  background-attachment: fixed ;
+}
+
+.active-nav-link {
+  border-bottom: 1px solid black;
+}
+
+.active-nav-link a {
+  color: black !important;
+}
+
+.nav-link-wrapper a {
+  color: #8a8a8a;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover {
+  border-bottom: 1px solid black;
+}
+
+.nav-link-wrapper a:hover {
+  color: black;
+}
+
+.portfolio-items-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr  ;
+}
+
+.portfolio-item-wrapper {
+  position:relative;
+}
+
+.portfolio-img-background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 700px;
+  width: 99%;
+  border-top: 5px solid white;
+  border-bottom: 1px solid white;
+}
+
+.img-text-wrapper {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.img-text-wrapper .subtitle {
+  transition: 1s;
+  color: transparent;
+}
+
+.image-blur {
+  transition: 1s;
+  filter: brightness(10%);
+}
+
+.img-text-wrapper:hover .subtitle {
+  color: #777;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.logo-wrapper img {
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+.two-column-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.profile-image-wrapper img {
+  width: 100%;
+}
+
+.profile-content-wrapper {
+  padding: 0px;
+}
+
+.profile-content-wrapper h1 {
+  color: lightseagreen;
+}
+
+h1{  font-family: "Lato", sans-serif;
+
+  margin: 5px;
+
+}
+
+p{
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+font:bolder;
+  margin: 2px;
+
+}
+.li{
+    font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+font:lighter;
+}
+.ul{
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+font:bolder;
+  margin: 2px;
+}
+
+
